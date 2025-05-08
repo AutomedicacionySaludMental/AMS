@@ -1,6 +1,3 @@
-
-
-<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
@@ -101,7 +98,152 @@ Este proyecto busca analizar a fondo qué es la automedicación, cómo se relaci
       <li>6.9% de adolescentes han tenido pensamientos suicidas.</li>
       <li>25.8% de intentos de suicidio en jóvenes están relacionados con la automedicación.</li>
     </ul>
-    <img src="https://i.imgur.com/3zO3YmN.png" alt="Gráfica sobre salud mental" />
+    <!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Salud Mental y Automedicación</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body {
+      font-family: sans-serif;
+      background: #f1f5f9;
+      padding: 30px;
+      color: #1f2937;
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .chart-container {
+      max-width: 700px;
+      margin: 40px auto;
+      background: #fff;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    .source {
+      font-size: 14px;
+      text-align: center;
+      margin-top: 15px;
+      color: #374151;
+    }
+    .source a {
+      color: #2563eb;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Salud Mental y Automedicación según Nivel Educativo</h2>
+
+  <!-- Gráfica de Barras -->
+  <div class="chart-container">
+    <canvas id="barChart"></canvas>
+    <div class="source">
+      Fuente: <a href="https://www.gob.mx/salud/articulos/automedicacion-en-adolescentes-un-riesgo-para-la-salud" target="_blank">
+        Secretaría de Salud, Gobierno de México
+      </a>
+    </div>
+  </div>
+
+  <!-- Gráfica de Pastel -->
+  <div class="chart-container">
+    <canvas id="pieChart"></canvas>
+    <div class="source">
+      Fuente: <a href="https://www.unicef.org/mexico/comunicados-prensa/unicef-la-salud-mental-los-adolescentes-necesita-visibilizarse-y-atenderse" target="_blank">
+        UNICEF México – Salud Mental en Adolescentes
+      </a>
+    </div>
+  </div>
+
+  <script>
+    // Gráfica de Barras
+    const barCtx = document.getElementById('barChart').getContext('2d');
+    new Chart(barCtx, {
+      type: 'bar',
+      data: {
+        labels: ['Primaria', 'Secundaria', 'Bachillerato'],
+        datasets: [
+          {
+            label: 'Automedicación (%)',
+            data: [10, 28, 35],
+            backgroundColor: '#F87171'
+          },
+          {
+            label: 'Problemas de Salud Mental (%)',
+            data: [15, 40, 55],
+            backgroundColor: '#60A5FA'
+          }
+        ]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          title: {
+            display: true,
+            text: 'Automedicación y Salud Mental por Nivel Educativo'
+          },
+          legend: {
+            position: 'top'
+          }
+        },
+        scales: {
+          y: {
+            beginAtZero: true,
+            title: {
+              display: true,
+              text: 'Porcentaje (%)'
+            }
+          },
+          x: {
+            title: {
+              display: true,
+              text: 'Nivel Educativo'
+            }
+          }
+        }
+      }
+    });
+
+    // Gráfica de Pastel
+    const pieCtx = document.getElementById('pieChart').getContext('2d');
+    new Chart(pieCtx, {
+      type: 'pie',
+      data: {
+        labels: ['Ansiedad', 'Depresión', 'Estrés académico', 'Automedicación', 'Adicciones'],
+        datasets: [{
+          data: [30, 25, 20, 15, 10],
+          backgroundColor: [
+            '#34D399',
+            '#60A5FA',
+            '#FBBF24',
+            '#F87171',
+            '#A78BFA'
+          ]
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          title: {
+            display: true,
+            text: 'Principales Problemas de Salud Mental en Estudiantes'
+          },
+          legend: {
+            position: 'bottom'
+          }
+        }
+      }
+    });
+  </script>
+
+</body>
+</html>
+
   </section>
 
   <section class="section" id="causas">
@@ -160,3 +302,13 @@ Este proyecto busca analizar a fondo qué es la automedicación, cómo se relaci
 
 </body>
 </html>
+
+ 
+ 
+
+
+
+
+   
+
+
