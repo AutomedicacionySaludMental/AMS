@@ -98,7 +98,7 @@ Este proyecto busca analizar a fondo qué es la automedicación, cómo se relaci
       <li>6.9% de adolescentes han tenido pensamientos suicidas.</li>
       <li>25.8% de intentos de suicidio en jóvenes están relacionados con la automedicación.</li>
     </ul>
-    <!DOCTYPE html>
+  
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
