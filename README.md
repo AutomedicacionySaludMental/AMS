@@ -297,7 +297,7 @@ Este proyecto busca analizar a fondo qué es la automedicación, cómo se relaci
 </main>
 
 <footer>
-  <p>Proyecto de Yahir, Víctor, Juan Manuel y Ricardo sanchez | Historia 607M</p>
+  <p>Proyecto de  Juan Manuel | Historia 607M</p>
 </footer>
 
 </body>
